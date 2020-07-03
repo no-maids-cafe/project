@@ -1,11 +1,10 @@
-package team.nomaidcafe.project.dao;
+package team.nomaidscafe.project.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import team.nomaidcafe.project.entity.User;
+import team.nomaidscafe.project.entity.User;
 
 public interface UserDAO extends JpaRepository<User, Integer> {
-    User findByUsername(String username);
-
-    User getByUsernameAndPassword(String username,String password);
+    User findByName(String name);
+    User getByNameAndPassword(String name,String password);
 }

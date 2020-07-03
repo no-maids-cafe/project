@@ -1,8 +1,8 @@
-package team.nomaidcafe.project.dto.base;
+package team.nomaidscafe.project.dto.base;
+
+import static team.nomaidscafe.project.util.BeanUtils.updateProperties;
 
 import org.springframework.lang.NonNull;
-
-import static team.nomaidcafe.project.util.BeanUtils.updateProperties;
 
 
 /**

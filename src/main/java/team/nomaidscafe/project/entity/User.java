@@ -1,5 +1,6 @@
-package team.nomaidcafe.project.entity;
+package team.nomaidscafe.project.entity;
 
+import java.util.List;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -10,9 +11,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * User entity.
- *
- * @author 
- * @date 2019/4
  */
 @Data
 @NoArgsConstructor
@@ -24,13 +22,13 @@ import lombok.NoArgsConstructor;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "User_ID")
+    @Column(name = "id")
     private int id;
 
     /**
      * Username.
      */
-    private String username;
+    private String name;
 
     /**
      * Password.
@@ -47,10 +45,17 @@ public class User {
      */
     private String phone;
 
+    /**
+     * email
+     */
+    private String email;
 
     /**
      * User status.
      */
     private boolean enabled;
+
+    @Transient
+    private List<Role> roles;
 
 }

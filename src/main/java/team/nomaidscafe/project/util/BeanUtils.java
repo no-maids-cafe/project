@@ -1,4 +1,4 @@
-package team.nomaidcafe.project.util;
+package team.nomaidscafe.project.util;
 
 import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.BeansException;
